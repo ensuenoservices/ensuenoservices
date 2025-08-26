@@ -2,7 +2,6 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -44,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <head>
         <script
           type="application/ld+json"
@@ -58,7 +57,7 @@ export default function RootLayout({
                 "Professional Wedding DJ services in Denver and Colorado Springs specializing in wedding receptions, corporate events, and private celebrations.",
               url: "https://www.ensuenoservices.com",
               telephone: "+1-XXX-XXX-XXXX",
-              email: "Joey.Carnicle@gmail.com",
+              email: "joey.carnicle@gmail.com",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Denver",
@@ -96,10 +95,8 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-          {children}
-          <Toaster />
-        </ThemeProvider>
+        {children}
+        <Toaster />
       </body>
     </html>
   )
