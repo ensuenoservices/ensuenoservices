@@ -84,5 +84,6 @@ export async function GET() {
     message: "Email test endpoint. Use POST to send test emails.",
     status: "ready",
     hasApiKey: !!process.env.RESEND_API_KEY,
+    timestamp: new Date().toISOString(),
   })
 }

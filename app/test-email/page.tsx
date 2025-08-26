@@ -74,21 +74,21 @@ export default function TestEmailPage() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-800 text-palette-cream p-8">
+    <div className="min-h-screen bg-slate-800 text-white p-8">
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-2">Email System Test</h1>
-          <p className="text-palette-cream/80">Test the email functionality for the EnSueño Services contact form.</p>
+          <p className="text-gray-300">Test the email functionality for the EnSueño Services contact form.</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 mb-8">
-          <Card className="bg-slate-700 border-palette-teal/20">
+          <Card className="bg-slate-700 border-gray-600">
             <CardHeader>
-              <CardTitle className="flex items-center text-palette-cream">
+              <CardTitle className="flex items-center text-white">
                 <Mail className="h-5 w-5 mr-2" />
                 Direct Email Test
               </CardTitle>
-              <CardDescription className="text-palette-cream/70">
+              <CardDescription className="text-gray-300">
                 Test the email templates and Resend integration directly.
               </CardDescription>
             </CardHeader>
@@ -96,7 +96,7 @@ export default function TestEmailPage() {
               <Button
                 onClick={runEmailTest}
                 disabled={isLoading}
-                className="w-full bg-palette-pink hover:bg-palette-pink-hover"
+                className="w-full bg-pink-600 hover:bg-pink-700 text-white"
               >
                 {isLoading ? (
                   <>
@@ -110,13 +110,13 @@ export default function TestEmailPage() {
             </CardContent>
           </Card>
 
-          <Card className="bg-slate-700 border-palette-teal/20">
+          <Card className="bg-slate-700 border-gray-600">
             <CardHeader>
-              <CardTitle className="flex items-center text-palette-cream">
+              <CardTitle className="flex items-center text-white">
                 <Mail className="h-5 w-5 mr-2" />
                 Contact Form Test
               </CardTitle>
-              <CardDescription className="text-palette-cream/70">
+              <CardDescription className="text-gray-300">
                 Test the complete contact form submission flow.
               </CardDescription>
             </CardHeader>
@@ -124,7 +124,7 @@ export default function TestEmailPage() {
               <Button
                 onClick={testContactForm}
                 disabled={isLoading}
-                className="w-full bg-palette-blue hover:bg-palette-blue/80"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white"
               >
                 {isLoading ? (
                   <>
@@ -140,9 +140,9 @@ export default function TestEmailPage() {
         </div>
 
         {testResult && (
-          <Card className={`mb-8 ${testResult.success ? "border-green-500/50" : "border-red-500/50"}`}>
+          <Card className={`mb-8 ${testResult.success ? "border-green-500" : "border-red-500"}`}>
             <CardHeader>
-              <CardTitle className="flex items-center text-palette-cream">
+              <CardTitle className="flex items-center text-white">
                 {testResult.success ? (
                   <CheckCircle className="h-5 w-5 mr-2 text-green-400" />
                 ) : (
@@ -168,8 +168,8 @@ export default function TestEmailPage() {
 
                 {testResult.details && (
                   <div className="bg-slate-600 rounded-lg p-4">
-                    <p className="text-palette-cream font-medium mb-2">Details:</p>
-                    <pre className="text-xs text-palette-cream/80 overflow-x-auto">
+                    <p className="text-white font-medium mb-2">Details:</p>
+                    <pre className="text-xs text-gray-300 overflow-x-auto">
                       {JSON.stringify(testResult.details, null, 2)}
                     </pre>
                   </div>
@@ -179,17 +179,17 @@ export default function TestEmailPage() {
           </Card>
         )}
 
-        <Card className="bg-slate-700 border-palette-teal/20">
+        <Card className="bg-slate-700 border-gray-600">
           <CardHeader>
-            <CardTitle className="flex items-center text-palette-cream">
+            <CardTitle className="flex items-center text-white">
               <AlertCircle className="h-5 w-5 mr-2" />
               What to Expect
             </CardTitle>
           </CardHeader>
-          <CardContent className="text-palette-cream/80">
+          <CardContent className="text-gray-300">
             <div className="space-y-4">
               <div>
-                <h4 className="font-medium text-palette-cream mb-2">If emails are working correctly:</h4>
+                <h4 className="font-medium text-white mb-2">If emails are working correctly:</h4>
                 <ul className="list-disc list-inside space-y-1 text-sm">
                   <li>You'll receive a notification email at joey.carnicle@gmail.com</li>
                   <li>You'll receive an auto-reply email at joey.carnicle@gmail.com</li>
@@ -199,7 +199,7 @@ export default function TestEmailPage() {
               </div>
 
               <div>
-                <h4 className="font-medium text-palette-cream mb-2">If there are issues:</h4>
+                <h4 className="font-medium text-white mb-2">If there are issues:</h4>
                 <ul className="list-disc list-inside space-y-1 text-sm">
                   <li>Check that RESEND_API_KEY is set in Vercel environment variables</li>
                   <li>Verify the API key is valid in your Resend dashboard</li>
@@ -208,7 +208,7 @@ export default function TestEmailPage() {
                 </ul>
               </div>
 
-              <div className="bg-palette-teal/10 border border-palette-teal/30 rounded-lg p-3">
+              <div className="bg-teal-900/20 border border-teal-500/30 rounded-lg p-3">
                 <p className="text-sm">
                   <strong>Note:</strong> This test page should be removed before going live in production.
                 </p>
@@ -221,7 +221,7 @@ export default function TestEmailPage() {
           <Button
             onClick={() => (window.location.href = "/")}
             variant="outline"
-            className="border-palette-teal hover:bg-palette-teal/20"
+            className="border-teal-500 hover:bg-teal-500/20 text-white"
           >
             Back to Main Site
           </Button>
