@@ -13,7 +13,7 @@ interface EmailData {
 export const createEmailTemplate = (data: EmailData) => {
   return {
     to: "Joey.Carnicle@gmail.com", // Your email
-    from: "joey.carnicle@gmail.com", // Updated sender domain
+    from: "noreply@ensuenoservices.com", // Updated sender domain
     replyTo: data.email,
     subject: `Wedding DJ Inquiry: ${data.subject}`,
     html: `
@@ -61,7 +61,7 @@ This inquiry was submitted through the EnSueño Services website.
 export const createAutoReplyTemplate = (data: EmailData) => {
   return {
     to: data.email,
-    from: "joey.carnicle@gmail.com", // Updated sender domain
+    from: "noreply@ensuenoservices.com", // Updated sender domain
     subject: "Thank you for your wedding DJ inquiry - EnSueño Services",
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">

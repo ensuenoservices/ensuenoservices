@@ -58,7 +58,7 @@ async function sendEmails(formData: any) {
 
     // Send notification email to you
     const notificationResult = await resend.emails.send({
-      from: "EnSueño Services <joey.carnicle@gmail.com>", // Updated sender
+      from: "EnSueño Services <noreply@ensuenoservices.com>", // Updated sender
       to: notificationEmail.to,
       replyTo: notificationEmail.replyTo,
       subject: notificationEmail.subject,
@@ -67,7 +67,7 @@ async function sendEmails(formData: any) {
 
     // Send auto-reply to customer
     const autoReplyResult = await resend.emails.send({
-      from: "DJ EnSueño <joey.carnicle@gmail.com>", // Updated sender
+      from: "DJ EnSueño <noreply@ensuenoservices.com>", // Updated sender
       to: autoReplyEmail.to,
       subject: autoReplyEmail.subject,
       html: autoReplyEmail.html,

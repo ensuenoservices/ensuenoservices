@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
 
     // Send notification email to you
     const notificationResult = await resend.emails.send({
-      from: "EnSueño Services <joey.carnicle@gmail.com>",
+      from: "EnSueño Services <noreply@ensuenoservices.com>", // Updated sender
       to: notificationEmail.to,
       replyTo: notificationEmail.replyTo,
       subject: `[TEST] ${notificationEmail.subject}`,
@@ -48,7 +48,7 @@ export async function POST(request: NextRequest) {
 
     // Send auto-reply to test email (your email)
     const autoReplyResult = await resend.emails.send({
-      from: "DJ EnSueño <joey.carnicle@gmail.com>",
+      from: "DJ EnSueño <noreply@ensuenoservices.com>", // Updated sender
       to: autoReplyEmail.to,
       subject: `[TEST] ${autoReplyEmail.subject}`,
       html: autoReplyEmail.html,
