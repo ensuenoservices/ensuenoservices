@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { GalleryGrid } from "@/components/gallery-grid"
 import { ContactForm } from "@/components/contact-form"
 import { TestimonialCard } from "@/components/testimonial-card"
+import { MobileMenu } from "@/components/mobile-menu"
 
 export default function Home() {
   return (
@@ -39,25 +40,7 @@ export default function Home() {
                 BOOK NOW
               </Button>
             </Link>
-            <Button variant="ghost" size="icon" className="md:hidden text-palette-cream">
-              <span className="sr-only">Toggle menu</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="h-6 w-6"
-              >
-                <line x1="4" x2="20" y1="12" y2="12" />
-                <line x1="4" x2="20" y1="6" y2="6" />
-                <line x1="4" x2="20" y1="18" y2="18" />
-              </svg>
-            </Button>
+            <MobileMenu />
           </div>
         </div>
       </header>
@@ -77,7 +60,8 @@ export default function Home() {
         <div className="container mx-auto px-4 z-10 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tighter text-palette-cream">EnSueño</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-palette-cream/80">
-            Professional Wedding DJ & Event Entertainment Services. Translating to "In a Dream", EnSueño turns your special night into an unforgettable experience.
+            Professional Wedding DJ & Event Entertainment Services. Translating to "In a Dream", EnSueño turns your
+            special night into an unforgettable experience.
           </p>
           <div className="flex justify-center">
             <Link href="#contact">
@@ -196,14 +180,19 @@ export default function Home() {
               business="CipherNoise Productions"
             />
             <TestimonialCard
-              quote="DJ Ensueño knows how to set the perfect vibe. Their seamless mixes keep the crowd fully engaged from start to finish. Beyond their musical talent, they bring a high level of professionalism and reliability, making every event smooth and stress-free. Whether it's a high-energy party or a more laid-back setting, they deliver every time."
+              quote="DJ EnSueño knows how to set the perfect vibe. Their seamless mixes keep the crowd fully engaged from start to finish. Beyond their musical talent, they bring a high level of professionalism and reliability, making every event smooth and stress-free. Whether it's a high-energy party or a more laid-back setting, they deliver every time."
               author="Spencer"
               business="Constellation Brands"
             />
             <TestimonialCard
-              quote="DJ Ensueño played for our Disco Skating Rink takeover and hit the vibe perfectly. He mixed nostalgic millennial Hip Hop and R&B with classic Disco and Soul tracks, all interwoven with deep house and the energy was incredible. We can't recommend him enough for your next event!"
+              quote="DJ EnSueño played for our Disco Skating Rink takeover and hit the vibe perfectly. He mixed nostalgic millennial Hip Hop and R&B with classic Disco and Soul tracks, all interwoven with deep house and the energy was incredible. We can't recommend him enough for your next event!"
               author="Madalyn"
               business="Disco Skating Rink"
+            />
+            <TestimonialCard
+              quote="DJ EnSueño is legit. My partner and I first saw him at the Santa Fe art walk and were immediately into his vibe and sound. We grabbed his info and ended up booking him for a pop-up for my clothing line—he totally made the event. The energy was on point all night, and a few of my friends (including a couple getting married) told me they were bummed they'd already booked a different DJ because they would've switched to him in a second. We're now having him DJ a bachelorette party and recommending him to everyone we know. If you want someone who can bring the perfect vibe and keep the party flowing, he's your guy."
+              author="Hink"
+              business="Keep Walkin LLC"
             />
           </div>
         </div>
@@ -234,7 +223,9 @@ export default function Home() {
                   <div>
                     <p className="font-medium text-palette-cream">Wedding DJ Services</p>
                     <p>Joey.Carnicle@gmail.com</p>
-                    <p className="text-sm mt-1">Serving Denver, Colorado Springs, Boulder, Fort Collins & surrounding areas</p>
+                    <p className="text-sm mt-1">
+                      Serving Denver, Colorado Springs, Boulder, Fort Collins & surrounding areas
+                    </p>
                   </div>
                 </div>
               </div>
