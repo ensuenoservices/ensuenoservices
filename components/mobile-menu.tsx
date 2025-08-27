@@ -38,7 +38,11 @@ export function MobileMenu() {
           {/* Menu Panel */}
           <div className="fixed top-0 right-0 h-full w-64 bg-slate-800 border-l border-palette-teal/20 shadow-xl">
             <div className="flex items-center justify-between p-4 border-b border-palette-teal/20">
-              <Link href="/" className="text-xl font-bold text-palette-cream" onClick={closeMenu}>
+              <Link
+                href="/"
+                className="text-xl font-bold text-palette-cream font-dancing text-shadow-elegant"
+                onClick={closeMenu}
+              >
                 EnSueño Services
               </Link>
               <Button

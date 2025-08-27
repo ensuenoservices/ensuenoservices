@@ -15,7 +15,10 @@ export default function Home() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-slate-800/90 backdrop-blur-sm border-b border-palette-teal/20">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="text-2xl font-bold tracking-tighter text-palette-cream">
+            <Link
+              href="/"
+              className="text-2xl font-bold tracking-tighter text-palette-cream font-dancing text-shadow-soft"
+            >
               EnSueño Services
             </Link>
             <nav className="hidden md:flex items-center space-x-8">
@@ -58,8 +61,10 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-slate-800/80 via-slate-800/60 to-slate-800"></div>
         </div>
         <div className="container mx-auto px-4 z-10 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tighter text-palette-cream">EnSueño</h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-palette-cream/80">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[10rem] font-bold mb-6 tracking-tighter text-palette-cream font-dancing text-shadow-hero leading-none">
+            EnSueño
+          </h1>
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-8 max-w-4xl mx-auto text-palette-cream/80 px-4">
             Professional Wedding DJ & Event Entertainment Services. Translating to "In a Dream", EnSueño turns your
             special night into an unforgettable experience.
           </p>
@@ -67,7 +72,7 @@ export default function Home() {
             <Link href="#contact">
               <Button
                 size="lg"
-                className="bg-palette-pink hover:bg-palette-pink-hover text-white font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-palette-pink/30"
+                className="bg-palette-pink hover:bg-palette-pink-hover text-white font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-palette-pink/30 text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4"
               >
                 BOOK NOW
               </Button>
@@ -106,7 +111,7 @@ export default function Home() {
                   alt="DJ EnSueño portrait"
                   width={500}
                   height={500}
-                  className="rounded-lg object-cover"
+                  className="rounded-lg object-cover w-full h-[500px]"
                 />
                 <div className="absolute inset-0 rounded-lg border-2 border-palette-teal/30"></div>
               </div>
@@ -212,7 +217,7 @@ export default function Home() {
       <section id="contact" className="py-20 bg-slate-800">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center tracking-tighter text-palette-cream">
-            BOOK YOUR WEDDING DJ
+            BOOK YOUR WEDDING OR EVENT DJ
           </h2>
           <div className="grid md:grid-cols-2 gap-12">
             <div>
@@ -240,7 +245,10 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0">
-              <Link href="/" className="text-2xl font-bold text-palette-cream tracking-tighter">
+              <Link
+                href="/"
+                className="text-2xl font-bold text-palette-cream tracking-tighter font-dancing text-shadow-glow"
+              >
                 EnSueño Services
               </Link>
               <p className="mt-2 text-palette-cream/60">Set the Vibe.</p>
