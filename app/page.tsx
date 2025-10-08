@@ -1,11 +1,11 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Instagram, Mail, Music } from "lucide-react"
+import { Instagram, Mail, Music, Calendar } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { GalleryGrid } from "@/components/gallery-grid"
 import { ContactForm } from "@/components/contact-form"
-import { TestimonialCard } from "@/components/testimonial-card"
+import { TestimonialCarousel } from "@/components/testimonial-carousel"
 import { MobileMenu } from "@/components/mobile-menu"
 
 export default function Home() {
@@ -35,12 +35,13 @@ export default function Home() {
                 CONTACT
               </Link>
             </nav>
-            <Link href="#contact">
+            <Link href="https://calendar.app.google/WyxuVRdpq7LYDG3Y9" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="outline"
-                className="hidden md:flex border-palette-pink hover:bg-palette-pink/20 bg-transparent text-palette-pink hover:text-white transition-all duration-300 font-semibold"
+                className="hidden md:flex items-center gap-2 border-palette-pink hover:bg-palette-pink/20 bg-transparent text-palette-pink hover:text-white transition-all duration-300 font-semibold"
               >
-                BOOK NOW
+                <Calendar className="h-4 w-4" />
+                SCHEDULE
               </Button>
             </Link>
             <MobileMenu />
@@ -168,48 +169,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center tracking-tighter text-palette-cream">
             WHAT CLIENTS SAY
           </h2>
-          <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-8 max-w-7xl mx-auto">
-            <TestimonialCard
-              quote="Joey DJ'd our son's wedding and did an outstanding job. He had all the guests on the floor dancing to the very end. There was great variety to the music, he was professional, and all round excellent. Excellent DJ. Our son's wedding was a success in large part to Joey and the way he ran the reception."
-              author="Pam"
-              business="Wedding - Denver, CO"
-            />
-            <TestimonialCard
-              quote="I work at a music venue in downtown Denver and have worked with EnSueño for about three years now. The first time he played our venue I had to have him back. We host A LOT of DJ's - so when one person stands out that brightly among the rest it's extremely noteworthy. He's fun, entertaining, extremely high vibes and energy, transitions are seamless and - above all - he can read the room. That's of utmost importance ESPECIALLY in an event/wedding setting. His sets have always been relevant to what people want to hear and he can pivot on a dime based on crowd reaction. Genuinely one of the best DJ's in Denver, I'm lucky to have him as a regularly booked DJ at our venue and I can't imagine a world in which he disappoints at your next wedding or event!"
-              author="Christie"
-              business="Larimer Lounge"
-            />
-            <TestimonialCard
-              quote="Joey is an amazingly talented DJ. His passion for music and skill at reading the crowd made our wedding the best night of our lives! We found Joey through a mutual contact. It was his first time DJ'ing a wedding, but we thought his background with other events and playing clubs would be a great fit for what we wanted out of our night. For starters, we enjoy a diverse range of music, and our friends and family who would be coming reflected that. Second, we wanted to focus on dancing and keeping the crowd energy up, and weren't really interested in traditional wedding gimmicks like line dancing. I'll try to explain all the ways that Joey nailed it! In terms of wedding day logistics, Joey brought his own equipment up to the venue (an outdoor covered pavilion in the mountains). He was self-sufficient with his setup, but made sure that it would work with our coordinator. The venue provided a table/tablecloth but we appreciated that Joey brought backups! He did a great job with announcements and rolled with the punches for the whole night. Given that Elena and I weren't the greatest of planners, we made some gametime changes to the schedule that Joey seamlessly fit in. We added an event to the itinerary and moved up the speeches by about 45 minutes once we saw how fast the catering was, and he did a great job making sure it flowed together smoothly. The fade in's and out's for the first dance and parents dances were perfect and the announcements for the speeches beforehand helped get everyone's attention. One big challenge that Joey really helped us with was coming up with a game plan for how all our different musical tastes could come together to make an awesome night. We wanted a chance to play everything from John Denver to ODESZA in a way that would be fun for everyone and keep the hype going. Joey was great to chat with and helped us come up with ideas that fit that vision. After our first call to introduce ourselves and discuss the wedding, we exchanged some emails and spotify playlists to further clarify our ideas. We gave him a couple of 'keystone' songs or artists and he suggested how they could fit together and flow well. Additionally, he combed through a huge request catalog we provided from our guests RSVP's to fill out a fantastic playlist for our cocktail hour and dinner. About a week before the wedding day, we had another call to finalize the details. Joey was very attentive during this call and made sure he had all our details correct, like pronunciations, event order, and timing (even pointing out some things we had missed!). But, where we were both so thoroughly impressed, was how he got the party started after the last of the parent dances. Right off the bat, Thank God I'm Country Boy had the dancefloor packed and people moving tables to clear more space. From there the energy never fell flat, he livemixed transitions from one song to the next, even into songs that were requested on the fly. I'll never forget how my Dad seemed to get activated like a sleeper agent when he played One Step Beyond. What really impressed me, in comparison to just about every other wedding DJ I've seen, was how attentive he was to the crowd mood. When the crowd had the energy he would keep it going, but there was always a breather when needed. The night had some amazing cresciendos, including me being crowdsurfed! We didn't want it to end even after three plus hours of dancing. We had a perfect experience, 5/5 ⭐️⭐️⭐️⭐️⭐️!"
-              author="Ben & Elena"
-              business="Wedding - Estes Park, CO"
-            />
-            <TestimonialCard
-              quote="I've had Joey DJ at my vintage shop the past few months and he brings a unique vibe every time. His sets flow effortlessly from disco to groove house to funk, with a good mix of crowd pleasers as well as unexpected tracks. His music has given my space a one of a kind atmosphere that customers always comment on. If you want a DJ who blends taste, skill, and good energy, Joey is a good choice."
-              author="Alejandro"
-              business="AfterGlow Vintage"
-            />
-            <TestimonialCard
-              quote="I have had the privilege of hiring DJ EnSueño on numerous silent disco events. His professionalism, reliability, and ability to engage a diverse crowd make him an invaluable partner. He demonstrates an exceptional talent for reading the room and creating seamless, energetic sets that keep guests entertained from start to finish. Our clients and attendees regularly share positive feedback about his performances, and we are confident in recommending him as a top-tier DJ for any event. He has become a trusted part of our team, and we look forward to continuing this successful collaboration."
-              author="Jason"
-              business="CipherNoise Productions"
-            />
-            <TestimonialCard
-              quote="DJ EnSueño knows how to set the perfect vibe. Their seamless mixes keep the crowd fully engaged from start to finish. Beyond their musical talent, they bring a high level of professionalism and reliability, making every event smooth and stress-free. Whether it's a high-energy party or a more laid-back setting, they deliver every time."
-              author="Spencer"
-              business="Constellation Brands"
-            />
-            <TestimonialCard
-              quote="DJ EnSueño played for our Disco Skating Rink takeover and hit the vibe perfectly. He mixed nostalgic millennial Hip Hop and R&B with classic Disco and Soul tracks, all interwoven with deep house and the energy was incredible. We can't recommend him enough for your next event!"
-              author="Madalyn"
-              business="Disco Skating Rink"
-            />
-            <TestimonialCard
-              quote="DJ EnSueño is legit. My partner and I first saw him at the Santa Fe art walk and were immediately into his vibe and sound. We grabbed his info and ended up booking him for a pop-up for my clothing line—he totally made the event. The energy was on point all night, and a few of my friends (including a couple getting married) told me they were bummed they'd already booked a different DJ because they would've switched to him in a second. We're now having him DJ a bachelorette party and recommending him to everyone we know. If you want someone who can bring the perfect vibe and keep the party flowing, he's your guy."
-              author="Hink"
-              business="Keep Walkin LLC"
-            />
-          </div>
+          <TestimonialCarousel />
         </div>
       </section>
 
@@ -242,6 +202,16 @@ export default function Home() {
                       Serving Denver, Colorado Springs, Boulder, Fort Collins & surrounding areas
                     </p>
                   </div>
+                </div>
+                <div className="mt-6">
+                  <Link href="https://calendar.app.google/WyxuVRdpq7LYDG3Y9" target="_blank" rel="noopener noreferrer">
+                    <Button className="w-full bg-palette-blue hover:bg-palette-blue/80 text-white font-semibold">
+                      SCHEDULE A CONSULTATION
+                    </Button>
+                  </Link>
+                  <p className="text-xs text-palette-cream/60 text-center mt-2">
+                    Book a free consultation to discuss your special day
+                  </p>
                 </div>
               </div>
             </div>

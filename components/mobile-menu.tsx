@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function MobileMenu() {
@@ -87,9 +87,15 @@ export function MobileMenu() {
               </Link>
 
               <div className="pt-4 border-t border-palette-teal/20">
-                <Link href="#contact" onClick={closeMenu}>
-                  <Button className="w-full bg-palette-pink hover:bg-palette-pink-hover text-white font-semibold">
-                    BOOK NOW
+                <Link
+                  href="https://calendar.app.google/WyxuVRdpq7LYDG3Y9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={closeMenu}
+                >
+                  <Button className="w-full bg-palette-pink hover:bg-palette-pink-hover text-white font-semibold flex items-center justify-center gap-2">
+                    <Calendar className="h-4 w-4" />
+                    SCHEDULE
                   </Button>
                 </Link>
               </div>
