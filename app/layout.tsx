@@ -42,6 +42,42 @@ export const metadata: Metadata = {
     generator: 'v0.app'
 }
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "EnSueño Services",
+  alternateName: "DJ EnSueño",
+  description:
+    "Professional Wedding DJ services in Denver and Colorado Springs specializing in wedding receptions, corporate events, and private celebrations.",
+  url: "https://www.ensuenoservices.com",
+  telephone: "+1-XXX-XXX-XXXX",
+  email: "joey.carnicle@gmail.com",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Denver",
+    addressRegion: "CO",
+    addressCountry: "US",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: "39.7392",
+    longitude: "-104.9903",
+  },
+  areaServed: [
+    { "@type": "City", name: "Denver", addressRegion: "CO" },
+    { "@type": "City", name: "Colorado Springs", addressRegion: "CO" },
+  ],
+  serviceType: [
+    "Wedding DJ Services",
+    "Corporate Event DJ",
+    "Private Party Entertainment",
+    "Wedding Reception Music",
+    "Event DJ Services",
+  ],
+  priceRange: "$$",
+  sameAs: ["https://www.instagram.com/dj_ensueno/", "https://soundcloud.com/carnicle"],
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -49,57 +85,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
+      <body className={`${inter.className} ${dancingScript.variable}`}>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              name: "EnSueño Services",
-              alternateName: "DJ EnSueño",
-              description:
-                "Professional Wedding DJ services in Denver and Colorado Springs specializing in wedding receptions, corporate events, and private celebrations.",
-              url: "https://www.ensuenoservices.com",
-              telephone: "+1-XXX-XXX-XXXX",
-              email: "joey.carnicle@gmail.com",
-              address: {
-                "@type": "PostalAddress",
-                addressLocality: "Denver",
-                addressRegion: "CO",
-                addressCountry: "US",
-              },
-              geo: {
-                "@type": "GeoCoordinates",
-                latitude: "39.7392",
-                longitude: "-104.9903",
-              },
-              areaServed: [
-                {
-                  "@type": "City",
-                  name: "Denver",
-                  addressRegion: "CO",
-                },
-                {
-                  "@type": "City",
-                  name: "Colorado Springs",
-                  addressRegion: "CO",
-                },
-              ],
-              serviceType: [
-                "Wedding DJ Services",
-                "Corporate Event DJ",
-                "Private Party Entertainment",
-                "Wedding Reception Music",
-                "Event DJ Services",
-              ],
-              priceRange: "$$",
-              sameAs: ["https://www.instagram.com/dj_ensueno/", "https://soundcloud.com/carnicle"],
-            }),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-      </head>
-      <body className={`${inter.className} ${dancingScript.variable}`}>
         {children}
         <Toaster />
       </body>
