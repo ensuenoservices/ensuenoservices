@@ -4,25 +4,25 @@
 
 @layer base {
   :root {
-    --background: 39 33% 96%;
+    --background: 39 52% 93%;
     --foreground: 24 16% 10%;
-    --card: 39 33% 98%;
+    --card: 39 52% 96%;
     --card-foreground: 24 16% 10%;
-    --popover: 39 33% 98%;
+    --popover: 39 52% 96%;
     --popover-foreground: 24 16% 10%;
-    --primary: 24 16% 10%;
-    --primary-foreground: 39 33% 96%;
-    --secondary: 27 14% 18%;
-    --secondary-foreground: 39 33% 96%;
-    --muted: 36 18% 91%;
+    --primary: 347 51% 25%;
+    --primary-foreground: 39 52% 93%;
+    --secondary: 36 48% 89%;
+    --secondary-foreground: 24 16% 10%;
+    --muted: 36 48% 89%;
     --muted-foreground: 24 8% 42%;
-    --accent: 34 47% 57%;
-    --accent-foreground: 24 16% 10%;
+    --accent: 347 51% 25%;
+    --accent-foreground: 39 52% 93%;
     --destructive: 0 65% 45%;
-    --destructive-foreground: 39 33% 96%;
-    --border: 30 14% 82%;
-    --input: 30 14% 82%;
-    --ring: 34 47% 57%;
+    --destructive-foreground: 39 52% 93%;
+    --border: 30 25% 78%;
+    --input: 30 25% 78%;
+    --ring: 347 51% 25%;
     --radius: 0.125rem;
   }
   * { @apply border-border; }
@@ -40,7 +40,7 @@
   .text-balance { text-wrap: balance; }
 }
 
-.dark { --background: 24 16% 10%; --foreground: 39 33% 96%; }
+.dark { --background: 24 16% 10%; --foreground: 39 52% 93%; --primary: 347 51% 25%; --primary-foreground: 39 52% 93%; --accent: 347 51% 25%; --accent-foreground: 39 52% 93%; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
