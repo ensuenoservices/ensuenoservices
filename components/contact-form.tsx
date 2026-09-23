@@ -204,7 +204,7 @@ export function ContactForm() {
           placeholder="Tell us about your event, date, venue, and any special requests..."
           rows={5}
           required
-          className={`bg-zinc-800 border-zinc-700 ${errors.message ? "border-red-500" : ""}`}
+          className={`bg-background border-border text-foreground placeholder:text-muted-foreground ${errors.message ? "border-red-500" : ""}`}
           disabled={isSubmitting}
         />
         {errors.message && <p className="text-red-400 text-sm mt-1">{errors.message}</p>}

@@ -1,16 +1,10 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, Dancing_Script } from "next/font/google"
+import { Inter } from "next/font/google"
 import "./globals.css"
 import { Toaster } from "@/components/ui/toaster"
 
 const inter = Inter({ subsets: ["latin"] })
-const dancingScript = Dancing_Script({
-  subsets: ["latin"],
-  variable: "--font-dancing-script",
-  weight: ["400", "500", "600", "700"],
-})
-
 export const metadata: Metadata = {
   title: "Wedding DJ Services Denver | EnSueño Services | Professional Event Entertainment",
   description:
@@ -85,7 +79,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${dancingScript.variable}`}>
+      <body className={inter.className}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
