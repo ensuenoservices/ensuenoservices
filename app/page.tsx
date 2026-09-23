@@ -24,6 +24,7 @@ export default function Home() {
           <Link href="/" className="font-serif text-2xl tracking-tight">EnSueño <span className="font-sans text-[10px] uppercase tracking-[0.28em] text-background/60">Services</span></Link>
           <nav className="hidden items-center gap-8 md:flex">
             <Link href="#experience" className="nav-link">The experience</Link>
+            <Link href="/weddings" className="nav-link">Weddings</Link>
             <Link href="#work" className="nav-link">Selected work</Link>
             <Link href="#contact" className="nav-link">Inquire</Link>
           </nav>
@@ -48,7 +49,7 @@ export default function Home() {
       <section id="experience" className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-36">
         <div className="grid gap-14 lg:grid-cols-[.8fr_1.2fr] lg:gap-24">
           <div><p className="eyebrow">The experience</p><h2 className="mt-5 max-w-md font-serif text-5xl leading-none tracking-tight lg:text-7xl">Every detail, <em className="text-accent">in rhythm.</em></h2></div>
-          <div><p className="max-w-2xl text-xl leading-relaxed text-muted-foreground lg:text-2xl">EnSueño brings a refined point of view to the dance floor. Music, atmosphere, and production work together to make your event feel entirely its own.</p><div className="mt-12 grid gap-8 border-t border-border pt-8 sm:grid-cols-3">{services.map((service) => <article key={service.number} className="group"><span className="text-xs text-accent">{service.number}</span><h3 className="mt-8 font-serif text-3xl">{service.title}</h3><p className="mt-4 text-sm leading-relaxed text-muted-foreground">{service.copy}</p><ArrowUpRight className="mt-8 h-5 w-5 text-accent transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></article>)}</div></div>
+          <div><p className="max-w-2xl text-xl leading-relaxed text-muted-foreground lg:text-2xl">EnSueño brings a refined point of view to the dance floor. Music, atmosphere, and production work together to make your event feel entirely its own.</p><div className="mt-12 grid gap-8 border-t border-border pt-8 sm:grid-cols-3">{services.map((service) => <article key={service.number} className="group"><span className="text-xs text-accent">{service.number}</span>{service.title === "Weddings" ? <Link href="/weddings" className="block"><h3 className="mt-8 font-serif text-3xl transition-colors group-hover:text-accent">{service.title}</h3><p className="mt-4 text-sm leading-relaxed text-muted-foreground">{service.copy}</p><ArrowUpRight className="mt-8 h-5 w-5 text-accent transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></Link> : <><h3 className="mt-8 font-serif text-3xl">{service.title}</h3><p className="mt-4 text-sm leading-relaxed text-muted-foreground">{service.copy}</p><ArrowUpRight className="mt-8 h-5 w-5 text-accent transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></>}</article>)}</div></div>
         </div>
       </section>
 
